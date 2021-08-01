@@ -1,0 +1,63 @@
+https://phoenixnap.com/kb/how-to-install-git-windows
+
+https://santexgroup.com/blog/continuous-delivery-using-asp-net-mvc4-web-api/
+
+https://muktak.com/continuous-deployment-of-net-projects-using-jenkins/
+
+https://dzone.com/articles/cicd-in-aspnet-mvc-using-jenkins
+
+
+/t:rebuild;package  /p:VisualStudioVersion=12.0 /p:Configuration=Release /p:DeployOnBuild=True
+
+/t:clean;build;package /p:PackageFileName="C:\Users\jaycessgiri\.jenkins\workspace\Pipeline.NET\Pipeline.zip"
+
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Microsoft\VisualStudio\v16.0\Web
+
+
+/p:PublishProfile=D:\publishprofilefile\TestPublish.pubxml
+
+/property:Configuration=Release /p:DeployonBuild=true /p:PublishProfile=D:\publishprofilefile\TestPublish.pubxml
+
+
+
+
+
+https://muktak.com/continuous-deployment-of-net-projects-using-jenkins/
+https://devblogs.microsoft.com/aspnet/web-packaging-creating-web-packages-using-msbuild/
+https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package-msbuild
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference?view=vs-2019
+http://docwiki.appmethod.com/appmethod/1.17/topics/en/Building_a_Project_Using_an_MSBuild_Command
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-targets?view=vs-2019
+https://docs.microsoft.com/en-us/visualstudio/msbuild/walkthrough-using-msbuild?view=vs-2019
+https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference?view=vs-2019
+https://faun.pub/jenkins-ci-cd-to-deploy-an-asp-net-core-application-6145b5308bff
+https://www.c-sharpcorner.com/article/continuous-integration-and-deployment-cicd-of-asp-net-core-application-on-azu/
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/25fe7d7d-9b4d-47b6-be3e-0e437fb7e998/how-to-reference-the-publish-profile-in-the-build-definition-of-a-web-site?forum=tfsbuild
+
+
+
+
+
+
+/p:Configuration=Release /p:WarningLevel=0 /p:Platform="Any Cpu" /p:DeployOnBuild=true /p:PackageFileName="C:\Users\jaycessgiri\.jenkins\workspace\Pipeline.NET\Pipeline.zip"
+
+
+
+
+/t:clean;build /p:Configuration=Release /p:WarningLevel=0 /p:Platform="Any Cpu" /p:DeployOnBuild=true 
+
+
+
+
+C:\"Program Files (x86)"\IIS\"Microsoft Web Deploy V3"\msdeploy.exe -verb:sync -source:contentPath="C:\Users\jaycessgiri\.jenkins\workspace\Pipeline.NET\samples-dotnet-helloworld\obj\Release" -dest:contentPath="C:\Website" 
+
+/p:DeployOnBuild=true/p:WebPublishMethod=Package/p:PackageAsSingleFile=true/p:PackageLocation="C:\Website\web.zip"
+
+
+
+
+jenkins master and slave 
+https://www.gdcorner.com/2019/12/30/JenkinsHomeLab-P3-WindowsAgents.html
+https://www.bogotobogo.com/DevOps/Jenkins/Jenkins_on_EC2_setting_up_master_slaves.php
+https://wiki.jenkins.io/display/JENKINS//Step+by+step+guide+to+set+up+master+and+agent+machines+on+Windows#space-menu-link-content
